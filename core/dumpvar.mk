@@ -13,11 +13,11 @@ endif
 ifeq ($(TARGET_ARCH),arm)
     ifneq ($(wildcard $(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-$(TARGET_GCC_VERSION)/bin),)
         # this should be copied to HOST_OUT_EXECUTABLES instead
-        ABP:=$(ABP):$(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-$(TARGET_GCC_VERSION)/bin
+        ABP:=$(ABP):$(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/android-toolchain-eabi-4.8/bin
     endif
     ifneq ($(wildcard $(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(TARGET_GCC_VERSION)/bin),)
         # this should be copied to HOST_OUT_EXECUTABLES instead
-        ABP:=$(ABP):$(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(TARGET_GCC_VERSION)/bin
+        ABP:=$(ABP):$(PWD)/prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/sabermod-arm-eabi-4.7/bin
     endif
 else ifeq ($(TARGET_ARCH),x86)
 
